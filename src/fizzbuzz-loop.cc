@@ -26,7 +26,7 @@ void fizloop1(unsigned int b, const unsigned int e){
   const string f3="fizz", b5="buzz", fb15="fizzbuzz";
   if ((b != e) && (e>b)){ //check range
     for (b; b<=e; ++b){
-      if      (!(b%15)){cout<<fb15;cout<<','<<endl;}
+      if      (!(b%15)){cout<<fb15;if (b!=e)cout<<','<<endl;}
       else if (!(b%5)) {cout<<b5;  if (b%e)cout<<',';} //Don't print last comma.
       else if (!(b%3)) {cout<<f3;  if (b%e)cout<<',';}
       else             {cout<<b;   if (b%e)cout<<',';}
